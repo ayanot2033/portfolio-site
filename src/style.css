@@ -1,0 +1,770 @@
+@charset "UTF-8";
+
+/* =====================
+  基本設定
+===================== */
+
+body {
+  background-color: #fff;
+  font-family: "Zen Maru Gothic", sans-serif;
+  color: #717171;
+}
+
+
+
+/* =====================
+  フォント設定
+===================== */
+
+/* 見出し */
+h2 {
+  font-family: "Inria Serif", serif;
+  font-size: 35px;
+  color: #717171;
+}
+
+/* 作品タイトル */
+h3 {
+  font-family: "Inria Serif", serif;
+  font-size: 17px;
+  color: #717171;
+}
+
+/* 説明文 */
+p {
+  font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 13px;
+  color: #887f7f;
+}
+
+
+/* =====================
+  TOP
+===================== */
+
+/* 自動スライド */
+
+#hero-content {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+
+  animation: heroFadeIn 1.2s ease forwards;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+.hero-intro {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  opacity:0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+
+
+
+.hero-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  opacity: 1;
+  animation: none;
+  animation-delay: 0.8s;
+}
+
+.hero-intro,
+.hero-title {
+  z-index: 20;
+  text-align: center;
+}
+
+
+
+@keyframes fadeUpTitle {
+
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+}
+
+
+
+.hero-intro p {
+  font-size:30px;
+  color:#fff;
+}
+
+
+.hero-title h1 {
+  font-family: "Inria Serif", serif;
+  font-size: 64px;
+  color: #fff;
+  opacity:0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.hero-title p {
+  font-size: 30px;
+  color: #fff;
+  opacity:0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1.3s;
+}
+
+
+
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.slider img.active {
+  opacity: 1;
+  animation: imageZoom 6s ease forwards;
+}
+
+
+@keyframes imageZoom {
+
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+
+}
+
+
+
+/* 矢印 */
+.slider-prev,
+.slider-next {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  outline: none;
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.25);
+
+  color: white;
+
+  font-size: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 100;
+
+  backdrop-filter: blur(8px);
+}
+
+
+.slider-prev {
+  left: 40px;
+  transition: transform 0.3s ease;
+}
+
+.slider-prev:hover {
+  transform: translate(-5px, -50%);
+}
+
+.slider-next {
+  right: 40px;
+  transition: transform 0.3s ease;
+}
+
+.slider-next:hover {
+  transform: translateX(8px) translateY(-50%);
+}
+
+
+/* ドット */
+.slider-dots {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 12px;
+}
+
+
+.slider-dots span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #ccc;
+
+  cursor: pointer;
+}
+
+
+.slider-dots span.active {
+  background: #707070;
+}
+
+
+
+
+
+
+
+
+/* プロフィール */
+#about {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+.profile-image {
+  width: 300px;
+  height: 300px;
+  background-color: #ddd;
+  border-radius: 12px;
+  position: relative;
+}
+
+
+.profile-message {
+  position: absolute;
+
+  top: -50px;
+  left: 200px;
+
+  width: 180px;
+  padding: 15px;
+
+  background: rgba(255,255,255,0.9);
+  border-radius: 20px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%) translateX(10px);
+  transition: 0.3s ease;
+}
+
+
+
+/* 小さい丸（💭の部分） */
+.profile-message::before,
+.profile-message::after {
+
+  content:"";
+
+  position:absolute;
+
+  background:white;
+
+  border-radius:50%;
+
+}
+
+
+.profile-message::before {
+
+  width:25px;
+  height:25px;
+
+  bottom:-20px;
+  left:45px;
+
+}
+
+
+.profile-message::after {
+
+  width:12px;
+  height:12px;
+
+  bottom:-35px;
+  left:30px;
+
+}
+
+
+/* 写真ホバー時 */
+.profile-image:hover .profile-message {
+
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(-50%) translateX(0);
+
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.tools {
+  display: flex;
+  gap: 16px;
+}
+
+.tool-image {
+  width: 50px;
+  height: 48px;
+  border-radius: 12px;
+}
+
+.tool-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+
+/* =====================
+  Scroll Animation
+===================== */
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+
+
+/* =====================
+  作品一覧
+===================== */
+
+#design {
+  padding: 80px;
+  padding-top: 150px;
+}
+
+#design h2 {
+  text-align: center;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 80px;
+}
+
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.work-card h3 {
+  margin: 15px 0 5px;
+}
+
+.work-card p {
+  margin: 0;
+}
+
+
+.work-image {
+  position: relative;
+  width: 400px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #b6b6b6;
+}
+
+
+
+.work-image:hover {
+  box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+
+.work-image > .main-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+
+
+.work-image:hover .main-image {
+
+  opacity: 0.35;
+
+  transform: scale(1.08);
+
+}
+
+
+.work-image:hover .preview-list {
+
+  opacity: 1;
+
+}
+
+
+.preview-list {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  padding-bottom: 25px;
+
+  gap: 10px;
+
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+
+
+.preview-list img {
+  width:30%;
+  height:auto;
+  object-fit:cover;
+}
+
+
+#illustration {
+  padding: 80px;
+}
+
+#illustration h2 {
+  text-align: center;
+}
+
+
+
+/* =====================
+  お問い合わせ
+===================== */
+
+#contact h2 {
+  text-align: center;
+}
+
+.contact-form {
+  width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+/* =====================
+  詳細ページ
+===================== */
+
+
+.work-page h2 {
+  font-size: 30px;
+  font-family: "Inria Serif", serif;
+}
+
+.work-page h3 {
+  font-size: 30px;
+  font-family: "Inria Serif", serif;
+}
+
+.work-page p {
+  font-size: 20px;
+  line-height: 2;
+  font-family: "Inria Serif", serif;
+}
+
+.work-top {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.work-top-image {
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUpWork 1s ease forwards;
+}
+
+
+@keyframes fadeUpWork {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.work-top-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.work-overview {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  justify-content: center;
+  padding-top: 100px;
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUpWork 0.8s ease forwards;
+  animation-delay: 0.2s;
+}
+
+
+.logo-image {
+  width: 350px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUpWork 0.8s ease forwards;
+}
+
+.logo-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.logo-shin {
+  width: 400px;
+}
+
+.logo-umigame {
+  width: 300px;
+}
+
+.logo-sudachi {
+  width: 250px;
+}
+
+.logo-yui {
+  width: 230px;
+}
+
+.logo-memoria {
+  width: 350px;
+}
+
+
+
+/* 横3列作品 */
+
+.work-gallery-logo {
+  display: grid;
+  grid-template-columns: repeat(3, 345px);
+  gap: 30px;
+  margin: 150px auto 0;
+  justify-content: center;
+}
+
+
+.logo-item {
+  width: 345px;
+  height: 480px;
+  background-color: #ddd;
+}
+
+.logo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* 大きく見せる作品 */
+
+.work-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 120px;
+  margin-top: 300px;
+}
+
+
+.visual-image {
+  width: 600px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.visual-message {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(6px);
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition: .4s ease;
+
+  text-align: center;
+}
+
+
+.visual-image:hover .visual-message {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.visual-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+
+/* 真-笠作品 */
+/* 上3枚 */
+.work-gallery-kasa {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  gap: 50px;
+  justify-content: center;
+  margin: 300px auto 0;
+}
+
+/* 下2枚 */
+.work-gallery-kasa-two {
+  display: grid;
+  grid-template-columns: repeat(2, 350px);
+  gap: 50px;
+  justify-content: center;
+  margin: 50px auto 0;
+}
+
+.poster-image {
+  width: 350px;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+
+.poster-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

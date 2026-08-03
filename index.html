@@ -1,261 +1,371 @@
 <!doctype html>
 <html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="stylesheet" href="./src/style.css">
-    <script type="module" src="./src/main.ts"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio-site</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    
-    <header>
-      <!-- ロゴ・ナビゲーション -->
-    </header>
 
-    <main class="top-page">
-      <section id="hero-content">
-        <!-- 最初に出すメッセージ -->
-        <div class="hero-intro">
-          <p>Welcome to my portfolio</p>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./images/portfolio/portfolio_logo.png" />
+  <link rel="stylesheet" href="./src/style.css">
+  <script type="module" src="./src/main.ts"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portfolio-site</title>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <header>
+    <!-- ロゴ・ナビゲーション -->
+    <a href="index.html" class="site-logo">
+      <img src="images/portfolio/portfolio_logo.png" alt="Ayano Tsuruki Logo">
+
+      <div class="logo-text">
+        <h1>Ayano Tsuruki</h1>
+        <p>Designer & Illustrator</p>
+      </div>
+    </a>
+
+    <div class="menu-area">
+
+      <button class="menu-button">
+        MENU
+      </button>
+
+      <nav class="pc-nav">
+        <a href="#about">ABOUT</a>
+        <a href="#work">WORK</a>
+        <a href="#contact">CONTACT</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="top-page">
+    <section id="hero-content">
+      <!-- 最初に出すメッセージ -->
+      <div class="hero-intro">
+        <p>Welcome to my portfolio</p>
+      </div>
+      <!-- 名前・肩書き -->
+      <div class="hero-title">
+        <h1>AYANO TSURUKI</h1>
+        <p>Design & Illustration</p>
+      </div>
+      <!-- 自動スライド -->
+      <div class="slider">
+        <img src="images/shin/shin_top.png" alt="SHIN" class="active">
+        <img src="images/umigamenonamida/umigamenonamida_top.png" alt="ウミガメの泪">
+        <img src="images/sudachi/sudachi_top.png" alt="SUDACHI">
+        <img src="images/yui/yui_top.png" alt="YUI">
+        <img src="images/memoria/memoria_top.png" alt="memoria">
+        <img src="images/art-flag/art-flag_flower_top.png" alt="アートフラッグ">
+        <img src="images/beauty/beauty_top.png" alt="Beauty">
+        <img src="images/heal/heal_top.png" alt="Heal">
+        <img src="images/y2k/y2k_top.png" alt="Y2k">
+      </div>
+
+      <!-- 矢印 -->
+      <button class="slider-prev">←</button>
+      <button class="slider-next">→</button>
+    </section>
+
+    <!-- インジケーター -->
+    <div class="slider-dots"></div>
+
+    <section id="about" class="fade-in">
+      <!-- プロフィール -->
+      <div class="profile-image">
+        <img src="images/profile/profile_photo.png" alt="プロフィール_顔写真">
+
+        <div class="profile-message">
+          こんにちは<br>
+          ポートフォリオを見てくださり
+          ありがとうございます
         </div>
-        <!-- 名前・肩書き -->
-        <div class="hero-title">
-          <h1>AYANO TSURUKI</h1>
-          <p>Design & Illustration</p>
-        </div>
-        <!-- 自動スライド -->
-        <div class="slider">
-          <img src="images/umigamenonamida/umigamenonamida_top.png" alt="ウミガメの泪" class="active">
-          <img src="images/shin/shin_top.png" alt="SHIN">
-          <img src="images/sudachi/sudachi_top.png" alt="SUDACHI">
-          <img src="images/memoria/memoria_top.png" alt="memoria">
-          <img src="images/yui/yui_top.png" alt="YUI">
-          <img src="images/princess/princess_top.png">
-          <img src="images/fashion/fashion_top.png">
-          <img src="images/y2k/y2k_top.png">
-        </div>
+      </div>
 
-        <!-- 矢印 -->
-        <button class="slider-prev">←</button>
-        <button class="slider-next">→</button>
-      </section>
+      <div class="profile-info">
+        <h2>AYANO TSURUKI</h2>
 
-      <!-- インジケーター -->
-      <div class="slider-dots"></div>
+        <!-- 肩書き -->
+        <p class="profile-role">
+          Graphic Designer / Web Designer
+        </p>
 
-      <section id="about" class="fade-in">
-        <!-- プロフィール -->
-        <div class="profile-image">
-          <img src="images/profile/profile_photo.png">
-
-          <div class="profile-message">
-            こんにちは<br>
-            ポートフォリオを見てくださり
-            ありがとうございます
-          </div>
+        <!-- 自己紹介 -->
+        <div class="profile-about">
+          <h3>ABOUT</h3>
+          <p>
+            グラフィックデザインを中心に、<br>
+            ロゴ・パッケージ・Webデザインなど<br>
+            ブランドの世界観を形にする制作を行っています。
+          </p>
         </div>
 
-        <div class = "profile-info">
-          <h2>AYANO TSURUKI</h2>
+        <!-- 経歴 -->
+        <div class="profile-career">
+          <h3>BACKGROUND</h3>
+          <p>
+            Graphic Design<br>
+            Branding<br>
+            Web Design / Front-end Development
+          </p>
+        </div>
 
+        <!-- スキル -->
+        <div class="profile-skill">
           <h3>SKILL</h3>
           <div class="tools">
             <div class="tool-image">
-              <img src="images/profile/tool_ai.png">
+              <img src="images/profile/tool_ai.png" alt="ツール_イラストレーター">
             </div>
             <div class="tool-image">
-              <img src="images/profile/tool_ps.png">
+              <img src="images/profile/tool_ps.png" alt="ツール_フォトショップ">
             </div>
             <div class="tool-image">
-              <img src="images/profile/tool_procreate.png">
+              <img src="images/profile/tool_procreate.png" alt="ツール_Procreate">
             </div>
             <div class="tool-image">
-              <img src="images/profile/tool_figma.png">
+              <img src="images/profile/tool_figma.png" alt="ツール_Figma">
             </div>
             <div class="tool-image">
-              <img src="images/profile/tool_vscode.png">
+              <img src="images/profile/tool_vscode.png" alt="ツール_VSCode">
             </div>
             <div class="tool-image">
-              <img src="images/profile/tool_camera.png">
+              <img src="images/profile/tool_camera.png" alt="ツール_カメラ">
             </div>
           </div>
-      
-          <p>X:</p>
-          <p>Instagram:</p>
-          <p>Mail:</p>
+        </div>
 
+        <!-- SNS -->
+        <div class="profile-sns">
+          <h3>SNS</h3>
+
+          <p>
+            X:
+          </p>
+
+          <p>
+            Instagram:
+          </p>
+
+          <p>
+            Mail:ayano.t.2033@gmail.com
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="work">
+      <!-- 作品一覧 -->
+      <section id="design" class="fade-in">
+        <h2>DESIGN</h2>
+        <div class="works-grid">
+          <a href="./pages/shin.html" class="work-card">
+            <div class="work-image">
+              <img class="main-image" src="images/shin/shin_visual.png" alt="真_ビジュアル">
+              <!-- hover時に出すプレビュー -->
+              <div class="preview-list">
+                <img src="images/shin/shin_preview1.png" alt="真_プレビュー1">
+                <img src="images/shin/shin_preview2.png" alt="真_プレビュー2">
+                <img src="images/shin/shin_preview3.png" alt="真_プレビュー3">
+              </div>
+            </div>
+            <h3>真-SHIN-</h3>
+            <p>ロゴ・パッケージ・ポスター</p>
+          </a>
+
+          <a href="pages/umigamenonamida.html" class="work-card">
+            <div class="work-image">
+              <img class="main-image" src="images/umigamenonamida/umigamenonamida_visual.png" alt="ウミガメの泪_ビジュアル">
+
+              <div class="preview-list">
+                <img src="images/umigamenonamida/umigamenonamida_preview1.png" alt="ウミガメの泪_プレビュー1">
+                <img src="images/umigamenonamida/umigamenonamida_previea2.png" alt="ウミガメの泪_プレビュー2">
+                <img src="images/umigamenonamida/umigamenonamida_preview3.png" alt="ウミガメの泪_プレビュー3">
+              </div>
+            </div>
+            <h3>ウミガメの泪</h3>
+            <p>ロゴ・パッケージ・ポスター</p>
+          </a>
+
+          <a href="pages/sudachi.html" class="work-card">
+            <div class="work-image">
+              <img class="main-image" src="images/sudachi/sudachi_visual.png" alt="SUDACHI_ビジュアル">
+
+              <div class="preview-list">
+                <img src="images/sudachi/sudachi_preview1.png" alt="SUDACHI_プレビュー1">
+                <img src="images/sudachi/sudachi_preview2.png" alt="SUDACHI_プレビュー2">
+                <img src="images/sudachi/sudachi_preview3.png" alt="SUDACHI_プレビュー3">
+              </div>
+            </div>
+            <h3>SUDACHI</h3>
+            <p>ロゴ・パッケージ・ポスター</p>
+          </a>
+
+          <a href="pages/yui.html" class="work-card">
+            <div class="work-image">
+              <img class="main-image" src="images/yui/yui_visual.png" alt="YUI_ビジュアル">
+
+              <div class="preview-list">
+                <img src="images/yui/yui_preview1.png" alt="YUI_プレビュー1">
+                <img src="images/yui/yui_preview2.png" alt="YUI_プレビュー2">
+                <img src="images/yui/yui_preview3.png" alt="YUI_プレビュー3">
+              </div>
+            </div>
+            <h3>YUI</h3>
+            <p>ロゴ・パッケージ</p>
+          </a>
+
+          <a href="pages/memoria.html" class="work-card">
+            <div class="work-image">
+              <img class="main-image" src="images/memoria/memoria.visual.png" alt="memoria_ビジュアル">
+
+              <div class="preview-list">
+                <img src="images/memoria/memoria_preview1.png" alt="memoria_プレビュー1">
+                <img src="images/memoria/memoria_preview2.png" alt="memoria_プレビュー2">
+                <img src="images/memoria/memoria_preview3.png" alt="memoria_プレビュー3">
+              </div>
+            </div>
+            <h3>memoria</h3>
+            <p>ロゴ・パッケージ</p>
+          </a>
+
+          <a href="./pages/art-flag.html" class="work-card">
+            <div class="work-image">
+              <img class="main-image" src="images/art-flag/art-flag_visual.png" alt="アートフラッグ_ビジュアル">
+
+              <div class="preview-list">
+                <img src="images/art-flag/art-flag_preview1.png" alt="アートフラッグ_プレビュー1">
+                <img src="images/art-flag/art-flag_preview2.png" alt="アートフラッグ_プレビュー2">
+                <img src="images/art-flag/art-flag_preview3.png" alt="アートフラッグ_プレビュー3">
+              </div>
+            </div>
+            <h3>宝塚華の道・アートフラッグ</h3>
+            <p>ビジュアル・フラッグ</p>
+          </a>
+
+          <a href="./pages/geitaniand.html" class="work-card">
+            <div class="work-image">
+              <img class="main-image" src="images/geitanland/geutanland_visual.png" alt="げいたんランド_ビジュアル">
+
+              <div class="preview-list">
+                <img src="images/geitanland/geitanland_preview1.png" alt="げいたんランド_プレビュー1">
+                <img src="images/geitanland/geitanland_preview2.png" alt="げいたんランド_プレビュー2">
+                <img src="images/geitanland/geitanland_preview3.png" alt="げいたんランド_プレビュー3">
+              </div>
+            </div>
+            <h3>げいたんランド</h3>
+            <p>キービジュアル・ポスター・チラシ</p>
+          </a>
         </div>
       </section>
 
-      <section id="works">
-        <!-- 作品一覧 -->
-        <section id="design" class="fade-in">
-          <h2>DESIGN</h2>
-          <div class="works-grid">
-            <a href="./pages/shin.html" class="work-card">
-              <div class="work-image">
-                <img class="main-image" src="images/shin/shin_visual.png">
-                <!-- hover時に出すプレビュー -->
-                <div class="preview-list">
-                  <img src="images/shin/shin_preview1.png" alt="">
-                  <img src="images/shin/shin_preview2.png" alt="">
-                  <img src="images/shin/shin_preview3.png" alt="">
-                </div>
+      <section id="illustration" class="fade-in">
+        <h2>ILLUSTRATION</h2>
+        <div class="works-grid">
+          <a href="./pages/beauty.html" class="work-card">
+            <div class="work-image">
+              <img class="main-image" src="images/beauty/beauty_visual.png" alt="Beauty_ビジュアル">
+
+              <div class="preview-list">
+                <img src="images/beauty/beauty_preview1.png" alt="Beauty_プレビュー1">
+                <img src="images/beauty/beauty_preview2.png" alt="Beauty_プレビュー2">
+                <img src="images/beauty/beauty_preview3.png" alt="Beauty_プレビュー3">
               </div>
-              <h3>真-SHIN-</h3>
-              <p>ロゴ・パッケージ・ポスター</p>
-            </a>
+            </div>
+            <h3>The Beginning of Beauty</h3>
+            <p>イラスレーション・グッズ</p>
+          </a>
 
-            <a href="pages/umigamenonamida.html" class="work-card">
-              <div class="work-image">
-                <img class="main-image" src="images/umigamenonamida/umigamenonamida_visual.png">
+          <a href="./pages/heal.html" class="work-card">
+            <div class="work-image">
+              <img class="main-image" src="images/heal/heal_visual.png" alt="Heal_ビジュアル">
 
-                <div class="preview-list">
-                  <img src="images/umigamenonamida/umigamenonamida_preview1.png" alt="">
-                  <img src="images/umigamenonamida/umigamenonamida_previea2.png" alt="">
-                  <img src="images/umigamenonamida/umigamenonamida_preview3.png" alt="">
-                </div>
+              <div class="preview-list">
+                <img src="images/heal/heal_preview1.png" alt="Heal_プレビュー1">
+                <img src="images/heal/heal_preview2.png" alt="Heal_プレビュー2">
+                <img src="images/heal/heal_preview3.png" alt="Heal_プレビュー3">
               </div>
-              <h3>ウミガメの泪</h3>
-              <p>ロゴ・パッケージ・ポスター</p>
-            </a>
+            </div>
+            <h3>Heal</h3>
+            <p>ビジュアル・キャラクターデザイン</p>
+          </a>
 
-            <a href="pages/sudachi.html" class="work-card">
-              <div class="work-image">
-                <img class="main-image" src="images/sudachi/sudachi_visual.png">
+          <a href="./pages/y2k.html" class="work-card">
+            <div class="work-image">
+              <img class="main-image" src="images/y2k/y2k_visual.png" alt="Y2K_ビジュアル">
 
-                <div class="preview-list">
-                  <img src="images/sudachi/sudachi_preview1.png" alt="">
-                  <img src="images/sudachi/sudachi_preview2.png" alt="">
-                  <img src="images/sudachi/sudachi_preview3.png" alt="">
-                </div>
+              <div class="preview-list">
+                <img src="images/y2k/y2k_preview1.png" alt="Y2K_プレビュー1">
+                <img src="images/y2k/y2k_preview2.png" alt="Y2K_プレビュー2">
+                <img src="images/y2k/y2k_preview3.png" alt="Y2K_プレビュー3">
               </div>
-              <h3>SUDACHI</h3>
-              <p>ロゴ・パッケージ・ポスター</p>
-            </a>
+            </div>
+            <h3>Y2K</h3>
+            <p class="description">
+              ビジュアル・グッズ
+            </p>
+          </a>
+        </div>
 
-            <a href="pages/yui.html" class="work-card">
-              <div class="work-image">
-                <img class="main-image" src="images/yui/yui_visual.png">
-
-                <div class="preview-list">
-                  <img src="images/yui/yui_preview1.png" alt="">
-                  <img src="images/yui/yui_preview2.png" alt="">
-                  <img src="images/yui/yui_preview3.png" alt="">
-                </div>
-              </div>
-              <h3>YUI</h3>
-              <p>ロゴ・パッケージ</p>
-            </a>
-
-            <a href="pages/memoria.html" class="work-card">
-              <div class="work-image">
-                <img class="main-image" src="images/memoria/memoria.visual.png">
-
-                <div class="preview-list">
-                  <img src="images/memoria/memoria_preview1.png" alt="">
-                  <img src="images/memoria/memoria_preview2.png" alt="">
-                  <img src="images/memoria/memoria_preview3.png" alt="">
-                </div>
-              </div>
-              <h3>memoria</h3>
-              <p>ロゴ・パッケージ</p>
-            </a>
-
-            <article class="work-card">
-              <div class="work-image">
-                <img class="main-image" src="images/art-flag/art-flag_visual.png">
-
-                <div class="preview-list">
-                  <img src="images/art-flag/art-flag_preview1.png" alt="">
-                  <img src="images/art-flag/art-flag_preview2.png" alt="">
-                  <img src="images/art-flag/art-flag_preview3.png" alt="">
-                </div>
-              </div>
-              <h3>宝塚華の道・アートフラッグ</h3>
-              <p>ビジュアル・フラッグ</p>
-            </article>
-
-            <article class="work-card">
-              <div class="work-image">
-                <img class="main-image" src="images/geitanland/geitanland_visual.png">
-
-                <div class="preview-list">
-                  <img src="images/geitanland/geitanland_preview1.png" alt="">
-                  <img src="images/geitanland/geitanland_preview2.png" alt="">
-                  <img src="images/art-flag/art-flag_preview3.png" alt="">
-                </div>
-              </div>
-              <h3>げいたんランド</h3>
-              <p>キービジュアル・ポスター・チラシ</p>
-            </article>
-          </div>
-        </section>
-
-        <section id="illustration" class="fade-in">
-          <h2>ILLUSTRATION</h2>
-          <div class="works-grid">
-            <article class="work-card">
-              <div class="work-image">
-                <img class="main-image" src="images/princess/illustration_princes.png">
-              </div>
-              <h3>作品タイトル</h3>
-              <p>説明文</p>
-            </article>
-
-            <article class="work-card">
-              <div class="work-image">
-                <img class="main-image" src="images/fashion/illustration_fashion.png">
-              </div>
-              <h3>作品タイトル</h3>
-              <p>説明文</p>
-            </article>
-
-            <article class="work-card">
-              <div class="work-image">
-                <img class="main-image" src="images/y2k/illsutration_y2k.png">
-              </div>
-              <h3>作品タイトル</h3>
-              <p class="description">
-                ブランドコンセプトの説明文です。
-              </p>
-            </article>
-          </div>
-          
-        </section>
       </section>
+    </section>
 
-      <section id="contact" class="fade-in">
-        <!-- お問い合わせ -->
-        <h2>CONTACT</h2>
+    <section id="contact" class="fade-in">
+      <!-- お問い合わせ -->
+      <h2>CONTACT</h2>
+      <div class="contact-card">
         <form class="contact-form">
-          
+
           <label for="name">Name</label>
           <input type="text" id="name" placeholder="お名前">
+          <p class="error-message" id="name-error"></p>
 
           <label for="email">Email</label>
           <input type="email" id="email" placeholder="メールアドレス">
+          <p class="error-message" id="email-error"></p>
 
           <label for="message">Message</label>
           <textarea id="message" rows="6" placeholder="お問い合わせ内容"></textarea>
-          
-          <button type="submit">Send</button>
+          <p class="error-message" id="message-error"></p>
 
+          <button type="submit">Confirm</button>
         </form>
-      </section>
-    </main>
 
-    <footer>
-      <!-- SNS・コピーライト -->
-    </footer>
+        <!-- 確認画面 -->
+        <div id="confirm-area"></div>
 
-    <script type="module" src="/src/main.ts"></script>
 
-  </body>
+        <!-- 完了メッセージ -->
+        <p class="success-message" id="success-message"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+
+    <h2>Ayano Tsuruki</h2>
+
+    <p class="footer-role">
+      Designer & Illustrator
+    </p>
+
+    <p class="copyright">
+      © 2026 Ayano Tsuruki<br>
+      All Rights Reserved.
+    </p>
+
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+
+</body>
+
 </html>

@@ -10,7 +10,9 @@ body {
   color: #717171;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 /* =====================
   フォント設定
@@ -41,6 +43,152 @@ p {
 /* =====================
   TOP
 ===================== */
+
+
+/*ロゴ・ヘッダーメニュー*/
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    z-index:1000;
+    box-sizing:border-box;
+}
+
+.site-logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:#717171;
+    margin-left:0;
+
+    padding:8px 16px;
+
+    background:rgba(255,255,255,0.3);
+    backdrop-filter:blur(8px);
+
+    border:1px solid rgba(255,255,255,.3);
+
+    border-radius:999px;
+}
+
+.site-logo img{
+    width:48px;
+    height:48px;
+}
+
+.logo-text h1{
+    margin:0;
+    font-size:20px;
+}
+
+.logo-text p{
+    margin:0;
+    font-size:12px;
+}
+
+
+
+
+/* メニュー */
+.menu-area{
+    position:relative;
+}
+
+
+.menu-button{
+  width:100px;
+  height:50px;
+
+  border-radius:999px;
+
+  border:1px solid rgba(255,255,255,.5);
+
+  background:rgba(255,255,255,.4);
+
+  backdrop-filter:blur(10px);
+
+  color:#717171;
+
+  cursor:pointer;
+
+  font-family:"Inria Serif", serif;
+}
+
+
+/* ナビゲーションを隠す */
+
+.pc-nav{
+
+  position:absolute;
+
+  top:55px;
+  right:0;
+
+  width:160px;
+
+  padding:25px;
+
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+
+
+  background:rgba(255,255,255,.65);
+
+  backdrop-filter:blur(15px);
+
+  border-radius:25px;
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,.1);
+
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:translateY(-10px);
+
+  transition:.4s ease;
+}
+
+
+.pc-nav a{
+
+    text-decoration:none;
+
+    color:#717171;
+
+    font-family:"Inria Serif", serif;
+
+    font-size:16px;
+
+    letter-spacing:0.15em;
+
+    transition:.3s ease;
+}
+
+/* ホバーで表示 */
+.menu-area:hover .pc-nav{
+
+  opacity:1;
+
+  visibility:visible;
+
+  transform:translateY(0);
+
+}
+
+
+
+
+
 
 /* 自動スライド */
 
@@ -286,7 +434,25 @@ p {
   display: flex;
   gap: 100px;
   justify-content: center;
+  align-items: flex-start;
   padding-top: 200px;
+}
+
+
+.profile-info {
+  margin-top:0;
+  padding-top:0;
+}
+
+
+.profile-info h2 {
+  margin-top:0;
+}
+
+
+.profile-info p {
+  font-size: 15px;
+  line-height: 2;
 }
 
 .profile-image {
@@ -295,6 +461,7 @@ p {
   background-color: #ddd;
   border-radius: 12px;
   position: relative;
+  flex-shrink:0;
 }
 
 
@@ -419,6 +586,26 @@ p {
   作品一覧
 ===================== */
 
+
+#design h2,
+#illustration h2 {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+#design h2::before,
+#design h2::after,
+#illustration h2::before,
+#illustration h2::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #717171;
+}
+
+
+
 #design {
   padding: 80px;
   padding-top: 150px;
@@ -439,7 +626,9 @@ p {
 .work-card {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 }
+
 
 
 .work-card h3 {
@@ -536,19 +725,387 @@ p {
   text-align: center;
 }
 
-.contact-form {
-  width: 600px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+
+#contact{
+    padding:200px 0;
 }
+
+
+.contact-card{
+
+    width:600px;
+
+    margin:80px auto 0;
+
+    padding:50px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:30px;
+
+    border:1px solid rgba(255,255,255,.5);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.08);
+}
+
+
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+
+.contact-form label{
+    font-size:14px;
+    letter-spacing:.1em;
+}
+
+
+.contact-form input,
+.contact-form textarea{
+
+    padding:15px 20px;
+
+    border-radius:15px;
+
+    border:1px solid #ddd;
+
+    background:rgba(255, 255, 255, 0.7);
+
+    font-family:"Zen Maru Gothic",sans-serif;
+
+}
+
+
+.contact-form button{
+    width:180px;
+    margin:30px auto 0;
+
+    padding:14px 40px;
+
+    border:1px solid rgba(255,255,255,.6);
+    border-radius:999px;
+    backdrop-filter:blur(8px);
+
+    background:#ffc3e966;
+
+    color:#717171;
+
+    font-family:"Inria Serif", serif;
+    font-size:16px;
+    letter-spacing:0.15em;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+
+
+.contact-form button:hover{
+
+    transform:translateY(-3px);
+
+    background:#a1caff;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+
+}
+
+
+/* エラーメッセージ */
+.error-message{
+
+    color:#d86b6b;
+
+    font-size:12px;
+
+    margin-top:-8px;
+
+    margin-bottom:5px;
+
+    min-height:16px;
+
+}
+
+
+
+
+/* =====================
+  確認画面
+===================== */
+
+#confirm-area {
+    width:600px;
+    margin:80px auto 0;
+    font-family:"Zen Maru Gothic",sans-serif;
+    text-align:center;
+}
+
+
+.show-confirm {
+    animation: fadeConfirm 0.5s ease forwards;
+}
+
+@keyframes fadeConfirm {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* タイトル */
+
+#confirm-area h3 {
+    font-family:"Zen Maru Gothic",sans-serif;
+    font-size:24px;
+    color:#717171;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+
+#confirm-area p {
+    text-align:left;
+    margin: 15px 0;
+    padding:0 100px;
+}
+
+
+/* 確認項目 */
+.confirm-item {
+    margin-bottom:30px;
+    text-align:left;
+}
+
+
+/* 項目名 */
+.confirm-label {
+    font-size:14px;
+    letter-spacing:.1em;
+    color:#717171;
+    margin-bottom:8px;
+}
+
+
+/* 入力内容 */
+
+.confirm-value {
+    font-size:15px;
+    color:#887f7f;
+    line-height:1.8;
+}
+
+
+
+.confirm-description {
+    text-align:center;
+    font-size:13px;
+    color:#887f7f;
+    line-height:1.8;
+    margin-bottom:40px;
+    font-weight:300;
+}
+
+/* ボタン */
+
+#confirm-area button {
+    width:180px;
+    margin:30px 10px 0;
+    padding:14px 40px;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,.6);
+    background:#ffc3e966;
+    color:#717171;
+    font-family:"Inria Serif",serif;
+    font-size:16px;
+    letter-spacing:.15em;
+    cursor:pointer;
+    transition:.3s ease;
+    display:inline-block;
+}
+
+
+#confirm-area button:hover {
+    transform:translateY(-3px);
+    background:#a1caff;
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+}
+
+
+
+.success-message {
+    text-align:center;
+    font-family:"Zen Maru Gothic",sans-serif;
+    font-size:16px;
+    color:#887f7f;
+    margin-top:40px;
+
+    opacity:0;
+    transform:translateY(20px);
+}
+
+
+.success-message.show-success {
+    animation: fadeSuccess 0.8s ease forwards;
+}
+
+@keyframes fadeSuccess {
+
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;
+  }
+}
+
+
+
+/* =====================
+  フッター
+===================== */
+.site-footer{
+    padding:100px 20px 60px;
+    text-align:center;
+    background:#fff;
+}
+
+.site-footer h2{
+    font-family:"Inria Serif", serif;
+    font-size:28px;
+    color:#717171;
+    margin-bottom:10px;
+}
+
+.footer-role{
+    font-size:15px;
+    color:#887f7f;
+    margin-bottom:40px;
+}
+
+.copyright{
+    font-size:12px;
+    color:#b0b0b0;
+    line-height:1.8;
+}
+
 
 
 
 /* =====================
   詳細ページ
 ===================== */
+
+.project-info{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap: 100px;
+  margin-top:80px;
+}
+
+.info-item h4{
+  font-family:"Inria Serif", serif;
+  font-size:30px;
+  color:#717171;
+  margin-bottom:15px;
+  position:relative;
+  padding-bottom:10px;
+}
+
+.info-item h4::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:1px;
+  background:#717171;
+  transition:0.4s ease;
+}
+
+.info-item:hover h4::after{
+  width:100%;
+}
+
+.info-item ul{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.info-item li{
+  line-height:2;
+  font-size:18px;
+  color:#887f7f;
+}
+
+
+
+/*文章*/
+.brand-concept{
+    max-width: 900px;   /* 最大幅を固定 */
+    margin: 0 auto;     /* 中央寄せ */
+}
+
+.brand-concept p{
+    line-height: 2;
+    text-align: left;
+}
+
+
+.work-section-title {
+  width: fit-content;
+  margin: 200px auto 40px;
+  text-align: center;
+}
+
+
+.section-number{
+  display:block;
+  font-family:"Inria Serif", serif;
+  font-size:60px;
+  color:#d9d9d9;
+  line-height:1;
+  margin-bottom:10px;
+}
+
+.work-section-title h3{
+  font-family:"Inria Serif", serif;
+  font-size:26px;
+  color:#717171;
+  letter-spacing:2px;
+}
+
+.work-section-title h3::after{
+  content:"";
+  display:block;
+  width:60px;
+  height:1px;
+  background:#717171;
+  margin:15px auto 0;
+  transition: width .4s ease;
+}
+
+.work-section-title:hover h3::after{
+  width:200px;
+}
+
+
 
 
 .work-page h2 {
@@ -602,20 +1159,19 @@ p {
 
 
 .work-overview {
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
+  gap: 40px;
   justify-content: center;
-  padding-top: 100px;
+  padding-top: 150px;
 
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUpWork 0.8s ease forwards;
   animation-delay: 0.2s;
 }
-
 
 .logo-image {
   width: 350px;
@@ -648,7 +1204,11 @@ p {
 }
 
 .logo-memoria {
-  width: 350px;
+  width: 300px;
+}
+
+.logo-heal {
+  width: 400px;
 }
 
 
@@ -678,14 +1238,45 @@ p {
 
 
 
-/* 大きく見せる作品 */
+
+
+.work-gallery-package {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 50px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+.package-item {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+}
+
+
+.package-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.package-item:nth-child(1) img {
+  transform: scale(0.85);
+}
+
+
+
+/* 大きく見せる */
 
 .work-showcase {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 120px;
-  margin-top: 300px;
+  margin-top: 80px;
 }
 
 
@@ -696,6 +1287,15 @@ p {
   overflow: hidden;
 }
 
+
+.visual-large {
+  width: 800px;
+}
+
+
+.visual-medium {
+  width: 500px;
+}
 
 .visual-message {
   position: absolute;
@@ -708,14 +1308,23 @@ p {
 
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(6px);
-
   opacity: 0;
   transform: translateY(20px);
-
   transition: .4s ease;
-
   text-align: center;
 }
+
+
+.visual-message p {
+  max-width: 480px;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.visual-message h3 {
+  font-size: 25px;
+}
+
 
 
 .visual-image:hover .visual-message {
@@ -743,7 +1352,7 @@ p {
   grid-template-columns: repeat(3, 350px);
   gap: 50px;
   justify-content: center;
-  margin: 300px auto 0;
+  margin: 250px auto 0;
 }
 
 /* 下2枚 */
@@ -759,12 +1368,87 @@ p {
   width: 350px;
   height: auto;
   border-radius: 50%;
+  position: relative;
   overflow: hidden;
 }
 
 
 .poster-image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  display: block;
 }
+
+
+/* ホバー説明 */
+.poster-message {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(6px);
+
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(20px);
+
+  transition: 0.4s ease;
+}
+
+
+.poster-image:hover .poster-message {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.poster-message h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+
+.poster-message p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+
+
+
+/* 作品トップ画像（フル表示用） */
+.full-image-top {
+  aspect-ratio: auto;
+}
+
+.full-image-top .work-top-image {
+  height: auto;
+}
+
+.full-image-top .work-top-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* 説明エリア調整 */
+.y2k-overview,
+.heal-overview {
+  padding-top: 200px;
+}
+
+
+
+
+
+
+

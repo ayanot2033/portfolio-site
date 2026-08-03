@@ -14,4 +14,9 @@ export function initScrollAnimation() {
         observer.observe(target);
     });
 
+
+}
+
+export function shouldShow(entry: IntersectionObserverEntry): boolean {
+    return entry.isIntersecting;
 }

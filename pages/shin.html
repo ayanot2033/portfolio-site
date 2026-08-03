@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="../images/portfolio/portfolio_logo.png" />
     <link rel="stylesheet" href="../src/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,6 +17,28 @@
 <body>
     <header>
         <!-- ロゴ・ナビゲーション -->
+        <a href="index.html" class="site-logo">
+            <img src="../images/portfolio/portfolio_logo.png" alt="Ayano Tsuruki Logo">
+
+            <div class="logo-text">
+                <h1>Ayano Tsuruki</h1>
+                <p>Designer & Illustrator</p>
+            </div>
+        </a>
+
+        <div class="menu-area">
+
+            <button class="menu-button">
+                MENU
+            </button>
+
+            <nav class="pc-nav">
+                <a href="../index.html#about">ABOUT</a>
+                <a href="../index.html#work">WORK</a>
+                <a href="../index.html#contact">CONTACT</a>
+            </nav>
+
+        </div>
     </header>
 
     <main class="work-page">
@@ -32,12 +54,17 @@
             <div class="logo-image logo-shin">
                 <img src="../images/shin/shin_logo.png">
             </div>
-            <h2>真 -SHIN-｜遍路文化を未来へつなぐブランディング</h2>
-            <p>四国八十八ヶ所をテーマにしたロゴデザイン・パッケージを展開。<br>
-                遍路道に認定されている八十八ヶ所のお寺のイメージカラーや屋根の形など<br>
-                特徴を掴んだロゴデザインを制作しました。<br>
-                並べた時にカラーチャートのような色の連続性が感じられるようにパッケージ<br>
-                の色味を３色縛りにし色の配置も統一しております。</p>
+            <h2>
+                真 -SHIN-<br class="sp">
+                遍路文化を未来へつなぐブランディング
+            </h2>
+            <p class="serif-text">
+                四国八十八ヶ所をテーマにしたロゴデザイン・パッケージを展開。
+                遍路道に認定されている八十八ヶ所のお寺のイメージカラーや屋根の形など
+                特徴を掴んだロゴデザインを制作しました。
+                並べた時にカラーチャートのような色の連続性が感じられるようにパッケージ
+                の色味を３色縛りにし色の配置も統一しております。
+            </p>
 
             <div class="project-info">
                 <div class="info-item">
@@ -437,6 +464,10 @@
                     <img src="../images/shin/shin_logo_visual88.png" alt="大窪寺">
                 </div>
             </section>
+
+            <button class="more-button" id="more-logo" type="button">
+                MORE VIEW
+            </button>
         </section>
 
 
@@ -562,10 +593,10 @@
                 <div class="visual-message">
                     <h3>Happi</h3>
                     <p>
-                        遍路文化を現代へつなぐ新たな<br>
-                        ブランドビジュアルとして提案したはっぴデザイン。<br>
-                        伝統的な装束のイメージを取り入れながら、<br>
-                        ロゴを組み合わせることで、現代でも親しみやすく<br>
+                        遍路文化を現代へつなぐ新たな
+                        ブランドビジュアルとして提案したはっぴデザイン。
+                        伝統的な装束のイメージを取り入れながら、
+                        ロゴを組み合わせることで、現代でも親しみやすく
                         印象に残るデザインを目指しました。
                     </p>
                 </div>
@@ -600,6 +631,7 @@
         </p>
 
     </footer>
+    <script type="module" src="../src/main.ts"></script>
 </body>
 
 </html>

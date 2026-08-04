@@ -38,6 +38,7 @@
 ## 3. システム構成
 本サイトはHTML/CSSによる画面構築と、TypeScriptによる機能制御で構成しています。
 
+```text
 Portfolio Site
 
 ├── HTML
@@ -60,7 +61,7 @@ Portfolio Site
     │
     └── 機能実装
         └── インタラクティブ機能の制御
-
+```
 
 
 

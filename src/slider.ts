@@ -1,16 +1,23 @@
+/**
+ * TOPページのメインビジュアルスライダーを管理するクラス
+ * 画像切替、ボタン操作、自動切替、ドット表示を制御する
+ */
 export class Slider {
 
+    // スライド対象の画像一覧
     private images: NodeListOf<HTMLImageElement>;
+
     private currentIndex: number = 0;
     private prevButton: HTMLButtonElement | null;
     private nextButton: HTMLButtonElement | null;
+
+    // スライド位置を示すドット一覧
     private dots: NodeListOf<HTMLSpanElement>;
 
 
     constructor() {
 
         this.images = document.querySelectorAll(".slider img");
-
         this.prevButton = document.querySelector(".slider-prev");
         this.nextButton = document.querySelector(".slider-next");
 
@@ -21,10 +28,13 @@ export class Slider {
     }
 
 
+    /**
+     * スライダーを開始する
+     * 初期表示設定、イベント登録、自動切替を実行する
+     */
     public start(): void {
 
 
-        // スライダーがないページでは終了
         if(this.images.length === 0){
 
             console.log("Slider skipped");
@@ -61,6 +71,9 @@ export class Slider {
     }
 
 
+    /**
+     * 次のスライドへ切り替える
+     */
     private nextSlide():void{
 
         this.currentIndex++;
@@ -78,6 +91,9 @@ export class Slider {
     }
 
 
+    /**
+     * 前のスライドへ切り替える
+     */
     private prevSlide():void{
 
         this.currentIndex--;
@@ -95,6 +111,9 @@ export class Slider {
     }
 
 
+    /**
+     * 現在のスライドを画面へ反映する
+     */
     private showSlide():void{
 
 
@@ -128,6 +147,9 @@ export class Slider {
     }
 
 
+    /**
+     * スライド数に合わせてドットを生成する
+     */
     private createDots():void{
 
 
@@ -154,19 +176,19 @@ export class Slider {
 
 
     public getCurrentIndex(): number {
-    return this.currentIndex;
-}
+        return this.currentIndex;
+    }
 
-public next(): void {
-    this.nextSlide();
-}
+    public next(): void {
+        this.nextSlide();
+    }
 
-public prev(): void {
-    this.prevSlide();
-}
+    public prev(): void {
+        this.prevSlide();
+    }
 
-public getImageCount(): number {
-    return this.images.length;
-}
+    public getImageCount(): number {
+        return this.images.length;
+    }
 
 }

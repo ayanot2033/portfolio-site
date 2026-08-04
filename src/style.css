@@ -41,12 +41,13 @@ p {
 
 
 /* =====================
-  TOP
+  トップ
 ===================== */
 
 
-/*ロゴ・ヘッダーメニュー*/
-
+/* =====================
+  ヘッダー
+===================== */
 header{
     position: fixed;
     top:0;
@@ -60,6 +61,10 @@ header{
     box-sizing:border-box;
 }
 
+
+/* =====================
+  ロゴ
+===================== */
 .site-logo{
     display:flex;
     align-items:center;
@@ -96,7 +101,9 @@ header{
 
 
 
-/* メニュー */
+/* =====================
+  メニュー
+===================== */
 .menu-area{
     position:relative;
 }
@@ -445,7 +452,9 @@ header{
 
 
 
-/* プロフィール */
+/* =====================
+  プロフィール
+===================== */
 #about {
   display: flex;
   gap: 100px;
@@ -463,6 +472,7 @@ header{
 
 .profile-info h2 {
   margin-top:0;
+  
 }
 
 
@@ -578,7 +588,7 @@ header{
 
 
 /* =====================
-  Scroll Animation
+  スクロールアニメーション
 ===================== */
 
 .fade-in {
@@ -729,7 +739,7 @@ header{
 
 
 /* =====================
-  お問い合わせ
+  お問合せ
 ===================== */
 
 #contact h2 {
@@ -1343,7 +1353,7 @@ header{
 
 
 
-/* 大きく見せる */
+
 
 .work-showcase {
   display: flex;
@@ -1528,33 +1538,37 @@ header{
   Responsive
 ===================== */
 
+/* =====================
+  SP（768px以下）
+===================== */
+
+@media screen and (max-width:768px){
 
 
 /* =====================
-  トップページ
+  ヘッダー
 ===================== */
-
-/* ヘッダー */
-@media screen and (max-width:768px){
 
 header{
     padding:15px 20px;
 }
+
 
 .site-logo img{
     width:35px;
     height:35px;
 }
 
+
 .logo-text h1{
     font-size:16px;
 }
 
-}
 
 
-/* メニュー */
-@media screen and (max-width:768px){
+/* =====================
+  メニュー
+===================== */
 
 .menu-button{
     width:100px;
@@ -1562,30 +1576,22 @@ header{
     font-size:15px;
 }
 
-}
 
 
-
-/* Hero画像 */
-@media screen and (max-width:768px){
+/* =====================
+  Hero
+===================== */
 
 .hero-title h1{
     font-size:40px;
 }
+
 
 .hero-title p,
 .hero-intro p{
     font-size:18px;
 }
 
-}
-
-
-
-
-
-/* スライダー・ドット */
-@media screen and (max-width:768px){
 
 #hero-content{
     aspect-ratio:16 / 9;
@@ -1593,73 +1599,116 @@ header{
     overflow:hidden;
 }
 
+
 .slider{
     height:100%;
 }
+
 
 .slider-dots{
     bottom:20px;
 }
 
-}
 
-/* プロフィール */
-@media screen and (max-width:768px){
+
+/* =====================
+  プロフィール
+===================== */
 
 #about{
+
     flex-direction:column;
     align-items:center;
+
     gap:40px;
+
     padding-top:100px;
 }
 
+
 .profile-image{
+
     width:220px;
     height:220px;
-}
 
 }
 
 
-/* 横３列 */
-@media screen and (max-width:768px){
+.profile-info{
+
+    width:90%;
+    margin:0 auto;
+
+}
+
+
+.profile-info h2{
+
+    margin-top:0;
+
+    text-align:center;
+
+}
+
+
+.profile-info p{
+
+    text-align:left;
+
+}
+
+
+
+/* =====================
+  Works一覧
+===================== */
 
 .works-grid{
+
     grid-template-columns:1fr;
+
     gap:50px;
+
 }
 
 
 .work-image{
+
     width:100%;
+
     height:auto;
-    aspect-ratio:16/9;
-}
+
+    aspect-ratio:16 / 9;
 
 }
 
 
 
-/* 問い合わせフォーム */
-@media screen and (max-width:768px){
+/* =====================
+  Contact
+===================== */
 
 .contact-card{
+
     width:90%;
+
     padding:30px 20px;
+
 }
 
 
 #confirm-area{
+
     width:90%;
+
 }
 
 
 #confirm-area p{
+
     padding:0 20px;
-}
 
 }
-
 
 
 
@@ -1667,185 +1716,253 @@ header{
   詳細ページ
 ===================== */
 
-@media screen and (max-width:768px){
 
-.work-top {
-  aspect-ratio: auto;
-}
+.work-top{
 
-.work-top-image {
-  height: auto;
-}
+    aspect-ratio:auto;
 
-.work-top-image img {
-  height: auto;
-  object-fit: contain;
 }
 
 
+.work-top-image{
 
-/* 詳細ページ文章 */
+    height:auto;
+
+}
+
+
+.work-top-image img{
+
+    height:auto;
+
+    object-fit:contain;
+
+}
+
+
+
+/* 詳細ページ見出し */
+
 .work-page h2{
-  width:100%;
-  padding:0 10px;
-  box-sizing:border-box;
 
-  text-align:center;
-  font-family:"Inria Serif", serif;
-  font-size:26px;
-  line-height:1.5;
-  letter-spacing:0.03em;
-}
+    width:100%;
 
-.sp{
-  display:block;
-}
+    padding:0 10px;
+
+    box-sizing:border-box;
+
+    text-align:center;
+
+    font-family:"Inria Serif", serif;
+
+    font-size:26px;
+
+    line-height:1.5;
+
+    letter-spacing:0.03em;
+
 }
 
 
 .work-page h3{
-  padding-left:20px;
-  padding-right:20px;
-  font-family:"Inria Serif", serif;
+
+    padding-left:20px;
+
+    padding-right:20px;
+
 }
 
 
 .work-page p{
-  padding-left:20px;
-  padding-right:20px;
-  font-family:"Inria Serif", serif;
-  line-height:2;
-  letter-spacing:0.05em;
+
+    padding-left:20px;
+
+    padding-right:20px;
+
+    line-height:2;
+
+    letter-spacing:0.05em;
+
 }
 
 
 
-/* 紹介文 */
 .brand-concept{
-  padding-left:20px;
-  padding-right:20px;
-  max-width:600px;
-  margin:0 auto;
+
+    padding-left:20px;
+
+    padding-right:20px;
+
+    max-width:600px;
+
+    margin:0 auto;
+
 }
 
 
 
-
-
-
-
-/* 作品情報 */
-@media screen and (max-width:768px){
+/* =====================
+  作品情報
+===================== */
 
 .project-info{
-  grid-template-columns:1fr;
-  gap:40px;
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
 }
+
 
 .info-item h4{
-  font-size:24px;
+
+    font-size:24px;
+
 }
+
 
 .info-item li{
-  font-size:15px;
-}
+
+    font-size:15px;
 
 }
 
 
-/* ロゴ一覧 */
-@media screen and (max-width:768px){
+
+/* =====================
+  ロゴ一覧
+===================== */
+
 
 .work-gallery-logo{
-  grid-template-columns:1fr;
-  gap:40px;
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
 }
+
 
 .logo-item{
-  width:90%;
-  height:auto;
-  aspect-ratio:345 / 480;
-  margin:auto;
-}
+
+    width:90%;
+
+    height:auto;
+
+    aspect-ratio:345 / 480;
+
+    margin:auto;
 
 }
 
 
 
-/* パッケージ画像 */
-@media screen and (max-width:768px){
+/* =====================
+  パッケージ画像
+===================== */
+
 
 .work-gallery-package{
-  grid-template-columns:1fr;
+
+    grid-template-columns:1fr;
+
 }
+
 
 .package-item{
-  width:90%;
-  height:auto;
-  margin:auto;
-}
+
+    width:90%;
+
+    height:auto;
+
+    margin:auto;
 
 }
 
 
 
-/* 大きい作品画像 */
-@media screen and (max-width:768px){
+/* =====================
+  大きい作品画像
+===================== */
+
 
 .visual-image,
 .visual-large,
 .visual-medium{
-  width:90%;
+
+    width:90%;
+
 }
+
 
 .visual-message p{
-  font-size:14px;
+
+    font-size:14px;
+
 }
+
 
 .visual-message h3{
-  font-size:20px;
-}
+
+    font-size:20px;
 
 }
 
 
 
-/* 笠ポスター */
-@media screen and (max-width:768px){
+/* =====================
+  笠ポスター
+===================== */
 
-/* 笠ポスター上3枚 */
+
 .work-gallery-kasa{
-  grid-template-columns:1fr;
-  gap:40px;
-  margin-top:100px;
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+    margin-top:100px;
+
 }
 
 
-/* 笠ポスター下2枚 */
 .work-gallery-kasa-two{
-  grid-template-columns:1fr;
-  gap:40px;
+
+    grid-template-columns:1fr;
+
+    gap:40px;
+
 }
 
 
 .poster-image{
-  width:90%;
-  margin:auto;
+
+    width:90%;
+
+    margin:auto;
+
 }
 
 
 .poster-message{
-  padding:20px;
+
+    padding:20px;
+
 }
 
 
 .poster-message h3{
-  font-size:20px;
+
+    font-size:20px;
+
 }
 
 
 .poster-message p{
-  font-size:14px;
+
+    font-size:14px;
+
 }
+
 
 }

@@ -51,39 +51,39 @@ window.addEventListener("DOMContentLoaded",()=>{
 
 
     // =====================
-// MORE VIEW
-// =====================
+    // MORE VIEW
+    // =====================
 
-const logoButton = document.getElementById("more-logo");
+    const logoButton = document.getElementById("more-logo");
 
-if(logoButton){
+        if(logoButton){
 
-    const logoLoadMore = new LoadMore(
-        "more-logo",
-        ".logo-item",
-        9,
-        9
-    );
+            const logoLoadMore = new LoadMore(
+            "more-logo",
+            ".logo-item",
+            9,
+            9
+        );
 
-    logoLoadMore.init();
+        logoLoadMore.init();
 
-}
+    }
 
 
 
-const packageButton = document.getElementById("more-package");
+    const packageButton = document.getElementById("more-package");
 
-if(packageButton){
+        if(packageButton){
 
-    const packageLoadMore = new LoadMore(
-        "more-package",
-        ".package-item",
-        3,
-        3
-    );
+            const packageLoadMore = new LoadMore(
+            "more-package",
+            ".package-item",
+            3,
+            3
+        );
 
-    packageLoadMore.init();
+        packageLoadMore.init();
 
-}
+    }
 
 });

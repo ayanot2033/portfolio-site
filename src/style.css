@@ -2002,7 +2002,7 @@ body{
     aspect-ratio:1 / 1;
     margin:auto;
     overflow:visible;
-    height:auto;
+    height:auto;aspect-ratio:auto;
 }
 
 .poster-image img{
@@ -2010,6 +2010,17 @@ body{
     aspect-ratio:1 / 1;
     object-fit:cover;
     border-radius:50%;
+}
+
+
+.work-gallery-kasa{
+    grid-template-columns:1fr;
+    gap:60px;
+}
+
+.work-gallery-kasa-two{
+    grid-template-columns:1fr;
+    gap:60px;
 }
 
 .poster-message{

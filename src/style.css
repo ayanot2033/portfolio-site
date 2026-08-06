@@ -1583,13 +1583,13 @@ header{
 ===================== */
 
 .hero-title h1{
-    font-size:40px;
+    font-size:32px;
 }
 
 
 .hero-title p,
 .hero-intro p{
-    font-size:18px;
+    font-size:14px;
 }
 
 
@@ -1609,7 +1609,20 @@ header{
     bottom:20px;
 }
 
+.slider-prev,
+.slider-next {
+    width:35px;
+    height:35px;
+    font-size:15px;
+}
 
+.slider-prev{
+    left:15px;
+}
+
+.slider-next{
+    right:15px;
+}
 
 /* =====================
   プロフィール
@@ -1662,6 +1675,14 @@ header{
 /* =====================
   Works一覧
 ===================== */
+
+#design,
+#illustration {
+    padding-left:20px;
+    padding-right:20px;
+}
+
+
 
 .works-grid{
 
@@ -1835,24 +1856,28 @@ header{
 
 
 .work-gallery-logo{
-
     grid-template-columns:1fr;
-
     gap:40px;
+}
 
+
+.logo-image,
+.logo-heal,
+.logo-shin,
+.logo-umigame,
+.logo-sudachi,
+.logo-yui,
+.logo-memoria {
+    width:80%;
+    max-width:300px;
 }
 
 
 .logo-item{
-
     width:90%;
-
     height:auto;
-
     aspect-ratio:345 / 480;
-
     margin:auto;
-
 }
 
 
@@ -1889,23 +1914,27 @@ header{
 .visual-image,
 .visual-large,
 .visual-medium{
-
     width:90%;
+}
 
+
+.visual-message{
+    position:static;
+    opacity:1;
+    transform:none;
+    background:none;
+    backdrop-filter:none;
+    padding:20px 0;
 }
 
 
 .visual-message p{
-
     font-size:14px;
-
 }
 
 
 .visual-message h3{
-
     font-size:20px;
-
 }
 
 

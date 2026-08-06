@@ -1815,6 +1815,10 @@ body{
     letter-spacing:0.03em;
 }
 
+.sp{
+    display:block;
+  }
+
 
 .work-page h3{
     padding-left:20px;

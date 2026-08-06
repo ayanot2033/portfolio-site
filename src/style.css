@@ -1887,6 +1887,7 @@ body{
 }
 
 
+ /* ロゴ一覧 */
 .logo-image,
 .logo-heal,
 .logo-shin,
@@ -1898,6 +1899,18 @@ body{
     max-width:220px;
     margin:auto;
 }
+
+
+.logo-sudachi{
+    width:60%;
+    max-width:160px;
+}
+
+.logo-yui{
+    width:60%;
+    max-width:160px;
+}
+
 
 .logo-item{
     width:90%;
@@ -1989,6 +2002,7 @@ body{
     aspect-ratio:1 / 1;
     margin:auto;
     overflow:visible;
+    height:auto;
 }
 
 .poster-image img{
@@ -1999,7 +2013,8 @@ body{
 }
 
 .poster-message{
-    position:relative;
+    position:static;
+    display:block;
     opacity:1;
     transform:none;
     background:none;
@@ -2007,7 +2022,6 @@ body{
     padding:20px 0;
     width:100%;
 }
-
 
 .poster-message h3{
     font-size:20px;

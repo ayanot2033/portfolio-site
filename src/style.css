@@ -1212,7 +1212,6 @@ header{
   gap: 40px;
   justify-content: center;
   padding-top: 150px;
-
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUpWork 0.8s ease forwards;
@@ -1779,26 +1778,25 @@ body{
 
 
 .work-top{
-
     aspect-ratio:auto;
-
 }
 
 
 .work-top-image{
-
     height:auto;
-
 }
 
 
 .work-top-image img{
-
     height:auto;
-
     object-fit:contain;
-
 }
+
+
+.work-overview {
+        padding-top:50px;
+    }
+
 
 
 
@@ -1836,17 +1834,19 @@ body{
 
 
 .brand-concept{
-
     padding-left:20px;
-
     padding-right:20px;
-
     max-width:600px;
-
     margin:0 auto;
-
 }
 
+
+
+
+.y2k-overview,
+.heal-overview {
+    padding-top:50px;
+}
 
 
 /* =====================
@@ -1854,25 +1854,18 @@ body{
 ===================== */
 
 .project-info{
-
     grid-template-columns:1fr;
-
     gap:40px;
-
 }
 
 
 .info-item h4{
-
     font-size:24px;
-
 }
 
 
 .info-item li{
-
     font-size:15px;
-
 }
 
 

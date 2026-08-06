@@ -1219,11 +1219,10 @@ header{
   animation-delay: 0.2s;
 }
 
-.logo-image {
-  width: 350px;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUpWork 0.8s ease forwards;
+.logo-image{
+    width:350px;
+    opacity:1;
+    transform:none;
 }
 
 .logo-image img {
@@ -1467,7 +1466,7 @@ header{
 .poster-image img {
   width:100%;
   height:100%;
-  object-fit:contain;
+  object-fit:cover;
   display:block;
 }
 
@@ -1980,11 +1979,8 @@ body{
 
 
 .work-gallery-kasa-two{
-
     grid-template-columns:1fr;
-
     gap:40px;
-
 }
 
 
@@ -1993,16 +1989,18 @@ body{
     max-width:350px;
     aspect-ratio:1 / 1;
     margin:auto;
+    overflow:visible;
 }
 
 
 .poster-message{
-    position:static;
+    position:relative;
     opacity:1;
     transform:none;
     background:none;
     backdrop-filter:none;
     padding:20px 0;
+    width:100%;
 }
 
 

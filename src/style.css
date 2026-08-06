@@ -1581,20 +1581,31 @@ header{
 /* =====================
   Hero
 ===================== */
-
-.hero-title h1{
-    font-size:32px;
+.hero-title{
+    top:45%;
 }
 
 
-.hero-title p,
+.hero-title h1{
+    font-size:28px;
+}
+
+.hero-intro{
+    top:35%;
+}
+
+.hero-title p{
+    font-size:13px;
+}
+
+
 .hero-intro p{
-    font-size:14px;
+    font-size:13px;
 }
 
 
 #hero-content{
-    aspect-ratio:16 / 9;
+    aspect-ratio: 4 / 3;
     height:auto;
     overflow:hidden;
 }
@@ -1683,6 +1694,22 @@ header{
 }
 
 
+#design h2,
+#illustration h2{
+    justify-content:center;
+    width:100%;
+}
+
+
+#design h2::before,
+#design h2::after,
+#illustration h2::before,
+#illustration h2::after{
+    flex: none;
+    width:60px;
+}
+
+
 
 .works-grid{
 
@@ -1694,13 +1721,10 @@ header{
 
 
 .work-image{
-
-    width:100%;
-
+    width:95%;
+    margin:0 auto;
     height:auto;
-
     aspect-ratio:16 / 9;
-
 }
 
 
@@ -1975,22 +1999,29 @@ header{
 
 .poster-message{
 
-    padding:20px;
+    position:static;
+
+    opacity:1;
+
+    transform:none;
+
+    background:none;
+
+    backdrop-filter:none;
+
+    padding:20px 0;
 
 }
 
 
 .poster-message h3{
-
     font-size:20px;
-
 }
 
 
 .poster-message p{
-
     font-size:14px;
-
+    line-height:1.8;
 }
 
 

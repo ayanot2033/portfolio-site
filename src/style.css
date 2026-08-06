@@ -2020,4 +2020,31 @@ body{
 }
 
 
+
+.work-gallery-logo,
+.work-gallery-package,
+.work-gallery-kasa,
+.work-gallery-kasa-two,
+.work-showcase{
+    width:100%;
+    max-width:100%;
+    box-sizing:border-box;
+}
+
+
+.visual-image,
+.visual-large,
+.visual-medium{
+    max-width:100%;
+}
+
+
+.work-page img{
+    max-width:100%;
+    height:auto;
+}
+
+
+
+
 }

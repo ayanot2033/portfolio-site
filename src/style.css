@@ -3,6 +3,11 @@
 /* =====================
   基本設定
 ===================== */
+body{
+    overflow-x:hidden;
+    width:100%;
+}
+
 
 body {
   background-color: #fff;
@@ -1551,6 +1556,13 @@ header{
 
 header{
     padding:15px 20px;
+    max-width:100%;
+}
+
+/* 横ズレ防止 */
+html,
+body{
+    overflow-x:hidden;
 }
 
 
@@ -1789,45 +1801,28 @@ header{
 /* 詳細ページ見出し */
 
 .work-page h2{
-
     width:100%;
-
     padding:0 10px;
-
     box-sizing:border-box;
-
     text-align:center;
-
     font-family:"Inria Serif", serif;
-
-    font-size:26px;
-
+    font-size:22px;
     line-height:1.5;
-
     letter-spacing:0.03em;
-
 }
 
 
 .work-page h3{
-
     padding-left:20px;
-
     padding-right:20px;
-
 }
 
 
 .work-page p{
-
     padding-left:20px;
-
     padding-right:20px;
-
     line-height:2;
-
     letter-spacing:0.05em;
-
 }
 
 
@@ -1884,6 +1879,11 @@ header{
     gap:40px;
 }
 
+.logo-image img{
+    max-width:100%;
+    height:auto;
+}
+
 
 .logo-image,
 .logo-heal,
@@ -1895,7 +1895,6 @@ header{
     width:80%;
     max-width:300px;
 }
-
 
 .logo-item{
     width:90%;
@@ -1969,13 +1968,9 @@ header{
 
 
 .work-gallery-kasa{
-
     grid-template-columns:1fr;
-
     gap:40px;
-
     margin-top:100px;
-
 }
 
 
@@ -1998,19 +1993,12 @@ header{
 
 
 .poster-message{
-
     position:static;
-
     opacity:1;
-
     transform:none;
-
     background:none;
-
     backdrop-filter:none;
-
     padding:20px 0;
-
 }
 
 

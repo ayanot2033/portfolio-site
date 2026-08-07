@@ -1882,9 +1882,6 @@ body{
     backdrop-filter:none;
     padding:20px 0;
     width:100%;
-    text-align: left;
-    box-sizing: border-box;
-
 }
 
 .poster-message h3{

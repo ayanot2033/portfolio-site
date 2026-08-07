@@ -79,14 +79,10 @@ header{
     text-decoration:none;
     color:#717171;
     margin-left:0;
-
     padding:8px 16px;
-
     background:rgba(255,255,255,0.3);
     backdrop-filter:blur(8px);
-
     border:1px solid rgba(255,255,255,.3);
-
     border-radius:999px;
 }
 
@@ -119,17 +115,11 @@ header{
 .menu-button{
   width:140px;
   height:60px;
-
   border-radius:999px;
-
   border:1px solid rgba(255,255,255,.5);
-
   background:rgba(255,255,255,.4);
-
   backdrop-filter:blur(10px);
-
   color:#717171;
-
   cursor:pointer;
   font-family:"Inria Serif", serif;
   font-size:18px;
@@ -140,16 +130,11 @@ header{
 /* ナビゲーションを隠す */
 
 .pc-nav{
-
   position:absolute;
-
   top:55px;
   right:0;
-
   width:160px;
-
   padding:25px;
-
   display:flex;
   flex-direction:column;
   gap:20px;
@@ -162,8 +147,6 @@ header{
   visibility:hidden;
   transform:translateY(-10px);
   transition:.4s ease;
-
-  
 }
 
 
@@ -182,39 +165,27 @@ header{
 
 /* ホバーで表示 */
 .menu-area:hover .pc-nav{
-
   opacity:1;
-
   visibility:visible;
-
   transform:translateY(0);
-
 }
 
 
 /* 文字の下線 */
 .pc-nav a::after {
-
     content:"";
-
     position:absolute;
-
     left:0;
     bottom:-5px;
-
     width:0;
     height:1px;
-
     background:#717171;
-
     transition:.3s ease;
 }
 
 
 .pc-nav a:hover::after {
-
     width:100%;
-
 }
 
 
@@ -240,7 +211,6 @@ header{
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -270,17 +240,14 @@ header{
 }
 
 @keyframes fadeUp {
-
   from {
     opacity: 0;
     transform: translate(-50%, -40%);
   }
-
   to {
     opacity: 1;
     transform: translate(-50%, -50%);
   }
-
 }
 
 
@@ -306,17 +273,14 @@ header{
 
 
 @keyframes fadeUpTitle {
-
   from {
     opacity: 0;
     transform: translate(-50%, -40%);
   }
-
   to {
     opacity: 1;
     transform: translate(-50%, -50%);
   }
-
 }
 
 
@@ -372,15 +336,12 @@ header{
 
 
 @keyframes imageZoom {
-
   from {
     transform: scale(1.05);
   }
-
   to {
     transform: scale(1);
   }
-
 }
 
 
@@ -394,24 +355,16 @@ header{
   outline: none;
   width: 50px;
   height: 50px;
-
   border-radius: 50%;
-
   border: 1px solid rgba(255,255,255,0.5);
   background: rgba(255,255,255,0.25);
-
   color: white;
-
   font-size: 20px;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   cursor: pointer;
-
   z-index: 100;
-
   backdrop-filter: blur(8px);
 }
 
@@ -440,10 +393,8 @@ header{
 .slider-dots span {
   width: 8px;
   height: 8px;
-
   border-radius: 50%;
   background: #ccc;
-
   cursor: pointer;
 }
 
@@ -500,18 +451,13 @@ header{
 
 .profile-message {
   position: absolute;
-
   top: -50px;
   left: 200px;
-
   width: 180px;
   padding: 15px;
-
   background: rgba(255,255,255,0.9);
   border-radius: 20px;
-
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-
   opacity: 0;
   visibility: hidden;
   transform: translateY(-50%) translateX(10px);
@@ -523,48 +469,34 @@ header{
 /* 小さい丸（💭の部分） */
 .profile-message::before,
 .profile-message::after {
-
   content:"";
-
   position:absolute;
-
   background:white;
-
   border-radius:50%;
-
 }
 
 
 .profile-message::before {
-
   width:25px;
   height:25px;
-
   bottom:-20px;
   left:45px;
-
 }
 
 
 .profile-message::after {
-
   width:12px;
   height:12px;
-
   bottom:-35px;
   left:30px;
-
 }
 
 
 /* 写真ホバー時 */
 .profile-image:hover .profile-message {
-
   opacity: 1;
   visibility: visible;
-
   transform: translateY(-50%) translateX(0);
-
 }
 
 .profile-image img {
@@ -713,15 +645,11 @@ header{
 .preview-list {
   position: absolute;
   inset: 0;
-
   display: flex;
   justify-content: center;
   align-items: flex-end;
-
   padding-bottom: 25px;
-
   gap: 10px;
-
   opacity: 0;
   transition: opacity 0.4s ease;
 }
@@ -760,21 +688,13 @@ header{
 
 
 .contact-card{
-
     width:600px;
-
     margin:80px auto 0;
-
     padding:50px;
-
     background:rgba(255,255,255,.45);
-
     backdrop-filter:blur(15px);
-
     border-radius:30px;
-
     border:1px solid rgba(255,255,255,.5);
-
     box-shadow:
     0 20px 40px rgba(0,0,0,.08);
 }
@@ -796,70 +716,46 @@ header{
 
 .contact-form input,
 .contact-form textarea{
-
     padding:15px 20px;
-
     border-radius:15px;
-
     border:1px solid #ddd;
-
     background:rgba(255, 255, 255, 0.7);
-
     font-family:"Zen Maru Gothic",sans-serif;
-
 }
 
 
 .contact-form button{
     width:180px;
     margin:30px auto 0;
-
     padding:14px 40px;
-
     border:1px solid rgba(255,255,255,.6);
     border-radius:999px;
     backdrop-filter:blur(8px);
-
     background:#ffc3e966;
-
     color:#717171;
-
     font-family:"Inria Serif", serif;
     font-size:16px;
     letter-spacing:0.15em;
-
     cursor:pointer;
-
     transition:.3s ease;
 }
 
 
 
 .contact-form button:hover{
-
     transform:translateY(-3px);
-
     background:#a1caff;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,.15);
-
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 
 /* エラーメッセージ */
 .error-message{
-
     color:#d86b6b;
-
     font-size:12px;
-
     margin-top:-8px;
-
     margin-bottom:5px;
-
     min-height:16px;
-
 }
 
 
@@ -981,7 +877,6 @@ header{
     font-size:16px;
     color:#887f7f;
     margin-top:40px;
-
     opacity:0;
     transform:translateY(20px);
 }
@@ -1178,7 +1073,6 @@ header{
 .work-top-image {
   width: 100%;
   height: 100%;
-
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUpWork 1s ease forwards;
@@ -1287,26 +1181,16 @@ header{
 .more-button{
     display:block;
     margin:80px auto 0;
-
     padding:15px 50px;
-
     border-radius:999px;
-
     border:1px solid #717171;
-
     background:rgba(255,255,255,.5);
-
     backdrop-filter:blur(8px);
-
     font-family:"Inria Serif",serif;
     font-size:16px;
-
     letter-spacing:.15em;
-
     color:#717171;
-
     cursor:pointer;
-
     transition:.3s ease;
 }
 
@@ -1389,12 +1273,10 @@ header{
 .visual-message {
   position: absolute;
   inset: 0;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   background: rgba(255,255,255,0.75);
   backdrop-filter: blur(6px);
   opacity: 0;
@@ -1479,17 +1361,12 @@ header{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   padding: 30px;
-
   background: rgba(255,255,255,0.8);
   backdrop-filter: blur(6px);
-
-  text-align: center;
-
+  text-align: left;
   opacity: 0;
   transform: translateY(20px);
-
   transition: 0.4s ease;
 }
 
@@ -1656,45 +1533,33 @@ body{
 ===================== */
 
 #about{
-
     flex-direction:column;
     align-items:center;
-
     gap:40px;
-
     padding-top:100px;
 }
 
 
 .profile-image{
-
     width:220px;
     height:220px;
-
 }
 
 
 .profile-info{
-
     width:90%;
     margin:0 auto;
-
 }
 
 
 .profile-info h2{
-
     margin-top:0;
-
     text-align:center;
-
 }
 
 
 .profile-info p{
-
     text-align:left;
-
 }
 
 
@@ -1728,11 +1593,8 @@ body{
 
 
 .works-grid{
-
     grid-template-columns:1fr;
-
     gap:50px;
-
 }
 
 
@@ -1750,25 +1612,18 @@ body{
 ===================== */
 
 .contact-card{
-
     width:90%;
-
     padding:30px 20px;
-
 }
 
 
 #confirm-area{
-
     width:90%;
-
 }
 
 
 #confirm-area p{
-
     padding:0 20px;
-
 }
 
 
@@ -1928,20 +1783,14 @@ body{
 
 
 .work-gallery-package{
-
     grid-template-columns:1fr;
-
 }
 
 
 .package-item{
-
     width:90%;
-
     height:auto;
-
     margin:auto;
-
 }
 
 

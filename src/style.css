@@ -1866,16 +1866,7 @@ body{
     gap:60px;
 }
 
-.poster-message {
-    position:static;
-    display:block;
-    opacity:1;
-    transform:none;
-    background:none;
-    backdrop-filter:none;
-    padding:20px 0;
-    width:100%;
-}
+
 
 .poster-message h3{
     font-size:20px;
@@ -1927,5 +1918,17 @@ body{
         backdrop-filter:none;
         padding:20px 0;
     }
+
+
+    .poster-message {
+    position:static;
+    display:block;
+    opacity:1;
+    transform:none;
+    background:none;
+    backdrop-filter:none;
+    padding:20px 0;
+    width:100%;
+}
 
 }

@@ -1400,7 +1400,7 @@ header{
   opacity: 0;
   transform: translateY(20px);
   transition: .4s ease;
-  text-align: center;
+  text-align: left;
 }
 
 
@@ -1964,6 +1964,7 @@ body{
     background:none;
     backdrop-filter:none;
     padding:20px 0;
+    text-align:left;
 }
 
 

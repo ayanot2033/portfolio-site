@@ -1425,7 +1425,7 @@ header{
   SP（768px以下）
 ===================== */
 
-@media screen and (max-width:600px){
+@media screen and (max-width:768px){
 
 
 /* =====================
@@ -1807,15 +1807,7 @@ body{
 }
 
 
-.visual-message{
-    position:static;
-    opacity:1;
-    transform:none;
-    background:none;
-    backdrop-filter:none;
-    padding:20px 0;
-    text-align:left;
-}
+
 
 
 .visual-message p{
@@ -1922,5 +1914,18 @@ body{
 
 
 
+
+}
+
+@media screen and (max-width:600px){
+
+    .visual-message{
+        position:static;
+        opacity:1;
+        transform:none;
+        background:none;
+        backdrop-filter:none;
+        padding:20px 0;
+    }
 
 }
